@@ -78,6 +78,9 @@ public class App {
         // Extract country in the world from a class
 
         ArrayList<country> continents = cw.getCountriesByContinent(a.con, "Asia");
+        // Create a new country in the word object
+        CountryMethod cw = new CountryMethod();
+        CountryOutput coutput = new CountryOutput();
 
 
 
@@ -89,6 +92,13 @@ public class App {
         System.out.println("For Continent");
         coutput.printPopulation(continents);
 
+        // Array Countries, Region, Continents with the population largest to smallest
+        // Extract country in the world from a class
+        ArrayList<country> region = cw.region_data(a.con,"caribbean");
+
+        // Printing data
+        System.out.println("For Region");
+        coutput.printPopulation(region);
 
         // Disconnect from database
         a.disconnect();
